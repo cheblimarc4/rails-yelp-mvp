@@ -1,0 +1,8 @@
+<div class="mx-auto mt-5" style="width:400px">
+  <h1 class="text-center">New Review</h1>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating, collection:0..5 %>
+  <%= f.button :submit, class: "btn-primary" %>
+<% end %>
+</div>

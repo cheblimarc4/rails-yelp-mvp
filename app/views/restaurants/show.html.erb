@@ -1,0 +1,26 @@
+<h1 class="text-center">Restaurant Info</h1>
+<div class="flex flex-col items-center justify-center mx-auto my-8">
+    <div class="card " style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center"><%= @restaurant.name %></h5>
+        <p class="card- text-center"><strong>Address:</strong> <%= @restaurant.address %></p>
+        <p class="card-text text-center"><strong>Phone Number:</strong> <%= @restaurant.phone_number %></p>
+        <p class="card-text text-center"><strong>Cuisine:</strong> <%= @restaurant.category %></p>
+        <div class="mx-auto m-4">
+          <%= link_to "Go Back", restaurants_path, class:"btn btn-primary " %>
+          <%= link_to "Add a Review", new_restaurant_review_path(@restaurant.id), class:"btn btn-primary " %>
+        </div>
+      </div>
+    </div>
+
+    <div class="card " style="width: 18rem;">
+      <div class="card-body">
+        <%@restaurant.reviews.each do |resto|%>
+          <ul>
+            <li class ="text-primary">Review: <%= resto.content %></li>
+            <li class ="text-primary">Rating: <%= resto.rating %></li>
+          </ul>
+        <% end %>
+        </div>
+    </div>
+</div>

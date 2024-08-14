@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A visitor can see the list of all restaurants.
+GET "restaurants"
 
-Things you may want to cover:
+A visitor can add a new restaurant, and be redirected to the show view of that new restaurant.
+GET "restaurants/new"
+POST "restaurants"
 
-* Ruby version
+A visitor can see the details of a restaurant, with all the reviews related to the restaurant.
+GET "restaurants/38"
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A visitor can add a new review to a restaurant
+GET "restaurants/38/reviews/new"
+POST "restaurants/38/reviews"

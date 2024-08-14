@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.btn.btn-primary.mt-2{
+  margin-left: 760px;
+ }
